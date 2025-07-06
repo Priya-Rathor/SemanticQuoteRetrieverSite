@@ -14,6 +14,8 @@ def load_retriever():
 
 retriever, df = load_retriever()
 
+
+
 if query:
     with st.spinner("Retrieving relevant quotes and generating answer..."):
         context_quotes = retriever.retrieve(query)
