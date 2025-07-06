@@ -1,0 +1,9 @@
+# requirements.txt
+
+pandas
+datasets
+torch
+sentence-transformers
+faiss-cpu
+openai
+streamlit
