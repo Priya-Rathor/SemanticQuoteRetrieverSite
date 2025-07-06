@@ -1,7 +1,7 @@
-💬 Semantic Quote Retrieval with RAG
-A Retrieval-Augmented Generation (RAG) system that intelligently fetches and explains English quotes using a fine-tuned semantic search model and OpenAI's GPT-4.
+# 💬 Semantic Quote Retrieval with RAG
+ ### A Retrieval-Augmented Generation (RAG) system that intelligently fetches and explains English quotes using a fine-tuned semantic search model and OpenAI's GPT-4.
 
-🚀 Project Overview
+## 🚀 Project Overview
 This project allows users to:
 
 Ask natural language questions about quotes (e.g., "What did Oscar Wilde say about hope?")
@@ -12,44 +12,44 @@ Generate contextual answers using GPT-4
 
 Interact with everything via a simple and elegant Streamlit web app
 
-🧠 How It Works
-🔹 1. Data Preparation
+## 🧠 How It Works
+### 🔹 1. Data Preparation
 Loads the Abirate/english_quotes dataset
 
 Cleans and combines quote, author, and tags into one semantic field
 
-🔹 2. Model Fine-Tuning
+### 🔹 2. Model Fine-Tuning
 Fine-tunes a SentenceTransformer (all-MiniLM-L6-v2) to create embeddings tailored to quote similarity
 
-🔹 3. Retrieval
+### 🔹 3. Retrieval
 Uses FAISS for fast vector similarity search
 
 Retrieves top relevant quotes based on the user query
 
-🔹 4. Generation
+### 🔹 4. Generation
 Sends the retrieved quotes to GPT-4 (via OpenAI API)
 
 GPT generates an answer grounded in retrieved context
 
-🔹 5. Web UI
+### 🔹 5. Web UI
 Built with Streamlit
 
 Type a query and get immediate, explainable responses
 
-🛠️ Setup Instructions
-✅ 1. Clone the Repository
+## 🛠️ Setup Instructions
+## ✅ 1. Clone the Repository
 bash
 Copy
 Edit
 git clone https://github.com/your-username/rag-quote-retriever.git
 cd rag-quote-retriever
-✅ 2. Create Environment and Install Dependencies
+## ✅ 2. Create Environment and Install Dependencies
 bash
 Copy
 Edit
 python setup_env.py
 source rag_env/bin/activate
-✅ 3. Train the Quote Embedding Model
+## ✅ 3. Train the Quote Embedding Model
 python
 Copy
 Edit
@@ -58,22 +58,22 @@ from model import train_and_save_model
 
 df = load_and_prepare_data()
 train_and_save_model(df)
-✅ 4. Set Your OpenAI API Key
+## ✅ 4. Set Your OpenAI API Key
 Create a .env or export it in your shell:
 
 bash
 Copy
 Edit
 export OPENAI_API_KEY=your-api-key-here
-✅ 5. Run the Streamlit App
+## ✅ 5. Run the Streamlit App
 bash
 Copy
 Edit
 streamlit run app.py
-📸 App Preview
+# 📸 App Preview
 <!-- Optional: add screenshot of your UI -->
 
-🧪 Evaluation (Optional)
+## 🧪 Evaluation (Optional)
 Test the RAG pipeline using some example queries:
 
 python
@@ -86,7 +86,7 @@ from evaluate_rag import test_queries
 df = load_and_prepare_data()
 retriever = QuoteRetriever("fine-tuned-quote-model", df)
 test_queries(["life quotes by Albert Einstein"], retriever)
-📦 Project Structure
+## 📦 Project Structure
 bash
 Copy
 Edit
@@ -105,7 +105,7 @@ OpenAI API Key
 
 Linux/macOS (or WSL for Windows)
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 Abirate/english_quotes Dataset
 
 SentenceTransformers
